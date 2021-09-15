@@ -1,12 +1,15 @@
 package com.example.workshopmongo.domain;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import com.example.workshopmongo.dto.AuthorDto;
+import com.example.workshopmongo.dto.ComentDto;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -26,6 +29,8 @@ public class Post implements Serializable{
 	private String title;
 	private String body;
 	private AuthorDto author;
+	
+	private List<ComentDto> comments = new ArrayList<>();
 	
 	public Post() {
 		
